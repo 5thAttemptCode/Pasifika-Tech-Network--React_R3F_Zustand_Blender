@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+:root{
+  --paddingInline: 4vw;
+  --heightNav: 12vh;
+
+  --fontColor: #dbdbe1;
+  --fontColorSec: #fff;
+  --accentColor: #4256f4;
+  --accentColorSecondary: #b3fe58;
+  --borderColor: #353535;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+  text-decoration: none;
+}
+
+body{
+  color: var(--fontColor);
+  background: #000;
+  background-image: radial-gradient(75.53% 100.65% at 50% 145.96%,#241ea9 0,rgba(33, 21, 64, 0) 100%);
+}
+
+.canvas{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+
+main{
+  padding-top: var(--heightNav);
+  padding-inline: var(--paddingInline);
+  min-height: 100vh;
+  height: 100vh;
+  /* background-size: calc(100vw/8) 100vh;
+  background-image: 
+        linear-gradient(to right, 
+        rgb(128, 128, 128, 0.15) 1px, 
+        transparent 1px,
+        transparent calc(100vw/8 - 1px),
+        rgb(128, 128, 128, 0.15) calc(100vw/8 - 1px));
+  background-repeat: repeat-x; */
+}
+
+a{
+  color: var(--fontColorSec);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

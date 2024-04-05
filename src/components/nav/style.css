@@ -1,0 +1,51 @@
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: var(--heightNav);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: var(--paddingInline);
+    backdrop-filter: blur(10px);
+
+    .logo{
+        font-weight: 600;
+        font-size: 20px;
+        display: flex;
+
+        > div{
+            height: 25px;
+            aspect-ratio: 1;
+            top: 25%;
+            margin-right: 0.5rem;
+
+            > img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    ul{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        > a{
+            padding: 0.55em 1.5em;
+            border-radius: 30px;
+
+            &:nth-child(1){
+                background: var(--accentColor);
+                border: 1px solid var(--accentColor);
+            }
+
+            &:not(:first-child){
+                border: 1px solid white;
+            }
+        }
+    }
+}

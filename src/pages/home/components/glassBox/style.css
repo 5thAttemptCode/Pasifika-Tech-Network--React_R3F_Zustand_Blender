@@ -1,0 +1,48 @@
+.glass-box-wrapper{
+    height: 270px;
+    width: 70%;
+    background: rgb(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--borderColor);
+
+    .glass-box-container{
+        height: 100%;
+        width: 50%;
+        border-right: 1px solid var(--accentColor);
+
+        h4{
+            color: var(--accentColor);
+        }
+
+        > h2{
+            font-size: 23px;
+            border-bottom: 0;
+            padding: 0;
+
+            > span{
+                font-size: 30px;
+                font-weight: 700;
+            }
+        }
+
+        > a{
+            background: black;
+            max-width: max-content;
+            color: var(--accentColorSecondary);
+            padding: 0.5em 1.2em;
+            border-radius: 30px;
+            border: 1px solid var(--accentColorSecondary);
+            margin: auto;
+        }
+    }
+
+    > img{
+        height: 100%;
+        width: 50%;
+        object-fit: cover;
+    }
+}
