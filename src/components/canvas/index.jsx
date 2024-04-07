@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Canvas, useFrame } from "@react-three/fiber"
 import { Hook } from "./components/model/Hook"
+import { MotherBoard } from './components/model/MotherBoard';
 
 
 function RotatingHookParent({ children }) {
@@ -10,16 +11,18 @@ function RotatingHookParent({ children }) {
     groupRef.current.rotation.y = clock.elapsedTime * 0.2
   })
 
-  return <group ref={groupRef}>{children}</group>
+  return <group rotation-x={1} ref={groupRef}>{children}</group>
 }
 
 export default function BackgroundCanvas() {
 
   return (
     <div className="canvas">
-      <Canvas camera={{ position: [0, 0, 3.4], fov: 55 }}>
+      <Canvas camera={{ position: [0, 0, 3.4], fov: 75 }}>
+        <directionalLight intensity={2} />
         <RotatingHookParent>
-          <Hook />
+          {/* <Hook /> */}
+          <MotherBoard />
         </RotatingHookParent>
       </Canvas>
     </div>
