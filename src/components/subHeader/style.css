@@ -1,7 +1,13 @@
 h2{
-    font-size: 35px;
-    font-weight: 400;
-    margin-block: 1rem 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--borderColor);
-  }  
+  font-size: clamp(2.1875rem, 1.0156rem + 3.75vw, 3.125rem);
+  font-weight: 700;
+  margin-block: 1rem 1.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--borderColor);
+  background: linear-gradient(to right bottom, #fff 30%, hsla(0, 0%, 100%, .5));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: unset;
+  line-height: 1.1;
+}  
