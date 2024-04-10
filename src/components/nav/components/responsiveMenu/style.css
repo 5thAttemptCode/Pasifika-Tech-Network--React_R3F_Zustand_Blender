@@ -28,7 +28,6 @@
         align-items: flex-start;
 
         a{
-          color: black;
           font-weight: 600;
           font-size: 20px;
 
@@ -38,7 +37,7 @@
         }
     }
 
-    .subscribe{
+    .subscribe-box{
         > p{
             font-size: 25px;
             margin-bottom: 1rem;
