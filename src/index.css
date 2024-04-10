@@ -9,11 +9,23 @@
   --fontColorSec: #fff;
   --accentColor: #4256f4;
   --accentColorSecondary: #b3fe58;
-  --borderColor: #353535;
+  --borderColor: #5c5c5c;
 
   --boxBackgroundColor: rgb(66, 86, 244, 0.2);
   --boxBackgroundBlur: blur(5px);
   --borderRadiusOne: 15px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(189, 189, 189);
 }
 
 *{
@@ -45,7 +57,6 @@ main{
   padding-top: var(--heightNav);
   padding-inline: var(--paddingInline);
   min-height: 100vh;
-  height: 100vh;
 }
 
 a{
@@ -53,8 +64,4 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-h4{
-  color: var(--accentColorSecondary);
 }
