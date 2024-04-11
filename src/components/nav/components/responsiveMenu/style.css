@@ -4,7 +4,7 @@
     right: 0;
     width: 250px;
     height: 400px;
-    background: var(--accentColor);
+    background: var(--fontColor);
     transition: all 0.25s;
     z-index: 1000;
     border-radius: var(--borderRadiusOne);
@@ -13,7 +13,7 @@
     flex-direction: column;
     gap: 0.5rem;
 
-    > ul, .subscribe{
+    > ul, .subscribe-box{
         width: 100%;
         height: 50%;
         padding: 1rem;
@@ -30,15 +30,18 @@
         a{
           font-weight: 600;
           font-size: 20px;
+          color: black;
 
           &.active, &:hover{
-            color: var(--accentColorSecondary);
+            color: var(--accentColor);
           }
         }
     }
 
     .subscribe-box{
+
         > p{
+            color: black;
             font-size: 25px;
             margin-bottom: 1rem;
             font-weight: 600;
