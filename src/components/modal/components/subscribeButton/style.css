@@ -1,0 +1,8 @@
+.subscribe{
+    background: var(--accentColor);
+    border: 1px solid var(--accentColor);
+
+    @media(max-width: 600px){
+        display: none;
+    }
+}
