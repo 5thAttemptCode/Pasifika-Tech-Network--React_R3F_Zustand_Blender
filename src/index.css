@@ -65,3 +65,16 @@ a{
   justify-content: center;
   align-items: center;
 }
+
+button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  padding: 0.55em 1.5em;
+  border-radius: 30px;
+  cursor: pointer;
+  background: none;
+  color: var(--fontColor);
+  border: 1px solid var(--fontColor);
+}
