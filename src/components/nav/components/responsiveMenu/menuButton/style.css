@@ -1,0 +1,22 @@
+.menu-button{
+    padding-inline: 1.5em 0.9em;
+
+    @media(max-width: 400px){
+        padding-inline: 0.9em;
+        border: none;
+    }
+    
+    > .icon{
+        transition: 0.1s;
+
+        &, .iconSecondary{
+            @media(max-width: 400px){
+                display: none;
+            }
+        }
+    }
+
+    &:hover > .icon{
+        rotate: 90deg;
+    }
+}
