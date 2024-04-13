@@ -34,59 +34,5 @@ nav{
         display: flex;
         align-items: center;
         gap: 2rem;
-
-        > a{
-            padding: 0.55em 1.5em;
-            border-radius: 30px;
-
-            &:nth-child(1){
-                position: relative;
-                background: var(--accentColor);
-                border: 1px solid var(--accentColor);
-            }
-
-            &:not(:first-child){
-                border: 1px solid white;
-            }
-        }
-    }
-}
-
-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    padding-block: 0.55em;
-    padding-inline: 1.5em 0.9em;
-    border-radius: 30px;
-    border: 1px solid var(--fontColor);
-    color: var(--fontColor);
-    background: none;
-    cursor: pointer;
-    
-    > .icon{
-        transition: 0.1s;
-    }
-
-    &:hover > .icon{
-        rotate: 90deg;
-    }
-}
-
-@media(max-width: 600px){
-    .subscribe{
-        display: none;
-    }
-}
-
-@media(max-width: 400px){
-    .icon, .iconSecondary{
-        display: none;
-    }
-
-    button {
-        padding-inline: 0.9em;
-        border: none;
     }
 }

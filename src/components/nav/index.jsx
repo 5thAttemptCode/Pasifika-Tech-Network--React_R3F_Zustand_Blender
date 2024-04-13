@@ -1,32 +1,24 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import './style.css'
-import ResponsiveMenu from './components/responsiveMenu'
 import { Link } from 'react-router-dom' 
-import { DotsThreeOutline, DotsThreeOutlineVertical } from 'phosphor-react'
+import MenuButton from './components/menuButton'
+import Modal from '../modal'
+import ResponsiveMenu from './components/responsiveMenu'
+import SubscribeButton from '../modal/components/subscribeButton'
+import useItemStore from '../../store/store'
 
 
 export default function Navbar() {
 
-  const [ menuVisible, setMenuVisible ] = useState(false)
+  const menuVisible = useItemStore((state) => state.itemVisible)
+  const modalVisible = useItemStore((state) => state.modalVisible)
+  const toggleMenuVisible = useItemStore((state) => state.toggleItemVisible)
+
   const menuButtonRef = useRef(null)
 
   const handleLinkClick = () => {
-    setMenuVisible(false)
+    toggleMenuVisible()
   }
-
-  const handleOutsideClick = (event) => {
-    if (menuVisible && !event.target.closest('.responsive-menu') && event.target !== menuButtonRef.current) {
-      setMenuVisible(false)
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener('click', handleOutsideClick)
-
-    return () => {
-      window.removeEventListener('click', handleOutsideClick)
-    }
-  }, [menuVisible])
 
   return (
     <>
@@ -38,20 +30,16 @@ export default function Navbar() {
           Pasifika Tech Network
         </Link>
         <ul>
-          <a href="https://discord.com/" target="_blank">Discord</a>
-          <button ref={menuButtonRef} onClick={() => setMenuVisible(prev => !prev)}>
-            Menu &nbsp; 
-            {!menuVisible ? 
-              <DotsThreeOutline className='icon' size={20} /> 
-              : 
-              <DotsThreeOutlineVertical  className='iconSecondary' size={20} />
-            }
-          </button>
+          <SubscribeButton />
+          <MenuButton menuVisible={menuVisible} handleMenuClick={toggleMenuVisible} menuButtonRef={menuButtonRef} />
         </ul>
       </nav>
       <ResponsiveMenu 
         isVisible={menuVisible} 
         handleLinkClick={handleLinkClick} 
+      />
+      <Modal 
+        isModalVisible={modalVisible} 
       />
     </>
   )
