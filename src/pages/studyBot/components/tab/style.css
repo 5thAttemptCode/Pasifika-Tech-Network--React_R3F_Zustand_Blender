@@ -3,6 +3,7 @@
   backdrop-filter: var(--boxBackgroundBlur);
   margin-bottom: 1rem;
   border-radius: var(--borderRadiusOne);
+  border: 1px solid var(--borderColor);
 
   > button{
     border: none;
