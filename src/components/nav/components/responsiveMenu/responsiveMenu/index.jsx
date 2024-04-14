@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.css'
 import { NavLink } from 'react-router-dom'
+import SubscribeForm from '../../../subscribeForm'
 
 
 export default function ResponsiveMenu({ isVisible, handleLinkClick }) {
@@ -13,10 +14,7 @@ export default function ResponsiveMenu({ isVisible, handleLinkClick }) {
         <NavLink onClick={handleLinkClick} to="/studybot">StudyBot</NavLink>
         <NavLink onClick={handleLinkClick} to="/contact">Contact</NavLink>
       </ul>
-      <div className="subscribe-box">
-        <p>Subscribe to our newsletter</p>
-        <input type="text"/>
-      </div>
+      <SubscribeForm />
     </div>
   )
 }
