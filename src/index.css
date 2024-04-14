@@ -2,11 +2,12 @@
 
 
 :root{
-  --paddingInline: 4vw;
+  --paddingInline: 5vw;
   --heightNav: 12vh;
 
   --fontColor: #dbdbe1;
   --fontColorSec: #fff;
+  --fontColorThird: #000;
   --accentColor: #4256f4;
   --accentColorSecondary: #b3fe58;
   --borderColor: #5c5c5c;
@@ -14,6 +15,7 @@
   --boxBackgroundColor: rgb(66, 86, 244, 0.2);
   --boxBackgroundBlur: blur(5px);
   --borderRadiusOne: 15px;
+  --borderRadiusTwo: 5px;
 }
 
 ::-webkit-scrollbar {
