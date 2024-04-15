@@ -16,7 +16,7 @@ export default function Modal({ isModalVisible }) {
   return (
     <div onClick={toggleModalVisible} className='modal' style={{ display: isModalVisible ? 'block' : 'none' }}>
       <div onClick={handleClick}>
-        <SubscribeForm />
+        <SubscribeForm infoMessage={true} />
       </div>
     </div>
   )
