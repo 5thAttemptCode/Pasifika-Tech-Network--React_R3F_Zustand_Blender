@@ -12,15 +12,20 @@
         border-bottom: 1px solid var(--borderColor);
     }
 
+    > p{
+        color: var(--fontColorThird);
+    }
+    
     form{
         display: flex;
         justify-content: space-between;
         background: var(--fontColorSec);
+        border-radius: var(--borderRadiusTwo);
+        overflow: hidden;
 
         > input{
             padding-block: 0.5em;
             padding-inline-start: 0.5em;
-            border-radius: var(--borderRadiusTwo);
             border: none;
             width: 100%;
 
