@@ -30,6 +30,11 @@
   background: rgb(189, 189, 189);
 }
 
+::selection{
+  color: var(--fontColorThird);
+  background: var(--accentColorSecondary)
+}
+
 *{
   margin: 0;
   padding: 0;
